@@ -14,4 +14,4 @@ Build GoDriver, a user-friendly car rental platform. The goal of this project is
 - Add reviews and ratings for cars
 
 ## Live Site URL
-[GoDriver Live Site](https://godriver.web.app/)
+[GoDriver Live Site](https://godriveer.web.app/)
