@@ -67,7 +67,7 @@ const Navbar = () => {
 		>
 			<div className="container mx-auto px-4 py-5 flex justify-between items-center">
 				<div className="flex items-center">
-					<Link to="/" className="text-xl font-bold text-soft-green">
+					<Link to="/" className="text-2xl font-bold text-green-600">
 						GoDriver
 					</Link>
 				</div>
@@ -94,7 +94,7 @@ const Navbar = () => {
 									<li className="text-base font-medium cursor-pointer">
 										<NavLink
 											to="/login"
-											className="mr-2 px-4 py-2 bg-green-500 text-white "
+											className="mr-2 px-4 py-2 bg-green-600 text-white "
 										>
 											Log-in
 										</NavLink>
@@ -102,7 +102,7 @@ const Navbar = () => {
 									<li className="text-base font-medium cursor-pointer">
 										<NavLink
 											to="/register"
-											className="ml-2 px-4 py-2 bg-orange-500 text-white "
+											className="ml-2 px-4 py-2 bg-[#2563eb] hover:bg-[#1f54c6] text-white "
 										>
 											Sign-up
 										</NavLink>

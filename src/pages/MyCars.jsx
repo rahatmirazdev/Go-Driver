@@ -105,7 +105,7 @@ const MyCars = () => {
                 <td className="py-2 px-4 border-b">
                   <button
                     onClick={() => handleEditCar(car)}
-                    className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg mr-2"
+                    className="btn bg-soft-green text-white hover:bg-[#1f54c6] border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg mr-2"
                   >
                     Edit
                   </button>
@@ -207,7 +207,7 @@ const MyCars = () => {
                   required
                 />
               </div>
-              <button type="submit" className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-6 py-3 text-lg font-semibold rounded-none shadow-lg">
+              <button type="submit" className="btn bg-soft-green text-white hover:bg-[#1f54c6] border-none px-6 py-3 text-lg font-semibold rounded-none shadow-lg">
                 Save Changes
               </button>
               <button

@@ -8,7 +8,7 @@ export default {
 			colors: {
 				"soft-green": "#4CAF50",
 				"sky-blue": "#00BCD4",
-				"warm-orange": "#FF9800",
+				"warm-orange": "#2563eb",
 				"light-beige": "#FFFDE7",
 				white: "#FFFFFF",
 				"light-gray": "#F5F5F5",

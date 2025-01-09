@@ -48,7 +48,7 @@ const ForgotPassword = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn bg-[#2563eb] hover:bg-[#1f54c6] text-white border-none" type="submit">
               Reset Password
             </button>
           </div>

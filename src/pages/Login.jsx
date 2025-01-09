@@ -35,8 +35,8 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <div className="mx-2 max-w-[500px] max-h-[600px] bg-[#1B263B] text-white card-body rounded-md">
-        <h2 className="text-2xl font-bold mb-4 text-white">
+      <div className="mx-2 max-w-[500px] max-h-[600px] text-black card-body rounded-md border-green-600 border">
+        <h2 className="text-2xl font-bold mb-4 text-black">
           Sign in to your account
         </h2>
         <form onSubmit={handleSubmit}>
@@ -48,7 +48,7 @@ const Login = () => {
               name="email"
               type="email"
               placeholder="Email"
-              className="input text-black"
+              className="input text-black rounded-md border-green-600 border"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -62,7 +62,7 @@ const Login = () => {
               name="password"
               type={passwordVisible ? "text" : "password"}
               placeholder="Password"
-              className="input text-black"
+              className="input text-black rounded-md border-green-600 border"
               required
             />
             <span
@@ -73,7 +73,7 @@ const Login = () => {
             </span>
             <NavLink
               to="#"
-              className="text-white mt-2"
+              className="text-black mt-2"
               onClick={handlePasswordReset}
             >
               Forgot password?
@@ -81,19 +81,19 @@ const Login = () => {
           </div>
           {error && <p className="text-red-500">{error}</p>}
           <div className="form-control mt-6">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn bg-green-600 hover:bg-green-700 text-white" type="submit">
               Login
             </button>
           </div>
         </form>
         <button
-          className="btn btn-secondary mt-4"
+          className="btn bg-[#2563eb] hover:bg-[#1f54c6] text-white mt-4 border-none"
           onClick={() => signInWithGoogle().then(() => navigate("/"))}
         >
           Sign in with Google
         </button>
         <div className="mt-4">
-          <NavLink to="/register" className="link link-hover">
+          <NavLink to="/register" className="text-black">
             Don&apos;t have an account? Register
           </NavLink>
         </div>

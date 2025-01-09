@@ -18,7 +18,7 @@ const SpecialOffers = () => {
               </p>
               <Link
                 to="/available-cars"
-                className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
+                className="btn bg-soft-green text-white hover:bg-[#2563eb] border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
               >
                 Book Now
               </Link>
@@ -34,7 +34,7 @@ const SpecialOffers = () => {
               </p>
               <Link
                 to="/available-cars"
-                className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
+                className="btn bg-soft-green text-white hover:bg-[#2563eb] border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
               >
                 Book Now
               </Link>

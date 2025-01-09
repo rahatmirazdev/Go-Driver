@@ -46,56 +46,56 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <div className="mx-2 max-w-[500px] max-h-[690px] bg-[#1B263B] text-white card-body rounded-md">
-        <h2 className="text-2xl font-bold mb-4 text-white">
+      <div className="mx-2 max-w-[500px] max-h-[690px] bg-white text-black card-body rounded-md border-green-600 border">
+        <h2 className="text-2xl font-bold mb-4 text-black">
           Create a new account
         </h2>
         <form onSubmit={handleSubmit}>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text text-black">Name</span>
             </label>
             <input
               name="name"
               type="text"
               placeholder="Name"
-              className="input text-black"
+              className="input text-black rounded-md border-green-600 border"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Photo URL</span>
+              <span className="label-text text-black">Photo URL</span>
             </label>
             <input
               name="photoURL"
               type="text"
               placeholder="Photo URL"
-              className="input text-black"
+              className="input text-black rounded-md border-green-600 border"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text text-black">Email</span>
             </label>
             <input
               name="email"
               type="email"
               placeholder="Email"
-              className="input text-black"
+              className="input text-black rounded-md border-green-600 border"
               required
             />
           </div>
           <div className="form-control relative">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text text-black">Password</span>
             </label>
             <input
               name="password"
               type={passwordVisible ? "text" : "password"}
               placeholder="Password"
-              className="input text-black"
+              className="input text-black rounded-md border-green-600 border"
               required
             />
             <span
@@ -107,19 +107,19 @@ const Register = () => {
             {passwordError && <p className="text-red-500">{passwordError}</p>}
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn bg-green-600 hover:bg-green-700 text-white" type="submit">
               Register
             </button>
           </div>
         </form>
         <button
-          className="btn btn-secondary mt-4"
+          className="btn bg-[#2563eb] hover:bg-[#1f54c6] text-white mt-4"
           onClick={() => signInWithGoogle().then(() => navigate("/"))}
         >
           Register with Google
         </button>
         <div className="mt-4">
-          <NavLink to="/login" className="link link-hover">
+          <NavLink to="/login" className="text-black">
             Already have an account? Login
           </NavLink>
         </div>

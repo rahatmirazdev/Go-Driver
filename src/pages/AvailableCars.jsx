@@ -116,7 +116,7 @@ const AvailableCars = () => {
           </p>
           <button
             onClick={() => navigate(`/car-details/${car._id}`)}
-            className="px-3 py-2 text-sm font-medium text-center text-white bg-[#4caf50] rounded-none hover:bg-[#ff9800] transition duration-150 ease-in-out"
+            className="px-3 py-2 text-sm font-medium text-center text-white bg-[#4caf50] rounded-none hover:bg-[#2563eb] transition duration-150 ease-in-out"
           >
             Book Now
           </button>
