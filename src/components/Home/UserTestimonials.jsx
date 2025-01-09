@@ -40,7 +40,7 @@ const UserTestimonials = () => {
 					User Testimonials
 				</h2>
 				<Slider
-					className="w-[500px] flex flex-col items-center justify-center max-w-96 mx-auto text-center"
+					className="w-[500px] flex flex-col items-center justify-center max-w-56 md:max-w-96 mx-auto text-center"
 					{...{
 						...settings,
 						slidesToShow: 1,
@@ -50,7 +50,7 @@ const UserTestimonials = () => {
 					{testimonials.map((testimonial, index) => (
 						<div
 							key={index}
-							className="flex flex-col items-center justify-center max-w-96 mx-auto text-center"
+							className="flex flex-col items-center justify-center max-w-56 md:max-w-96 mx-auto text-center"
 						>
 							<div>
 								<img

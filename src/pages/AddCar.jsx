@@ -46,7 +46,7 @@ const AddCar = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16  pt-24">
       <h2 className="text-4xl font-bold text-center text-dark-gray mb-12">Add Car</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

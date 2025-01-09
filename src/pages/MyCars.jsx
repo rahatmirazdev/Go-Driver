@@ -75,7 +75,7 @@ const MyCars = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16 min-h-screen">
+    <div className="container mx-auto px-4 py-16 min-h-screen  pt-24">
       <h2 className="text-4xl font-bold text-center text-dark-gray mb-12">My Cars</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white">

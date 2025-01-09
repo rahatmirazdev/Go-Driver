@@ -38,31 +38,31 @@ const CarDetails = () => {
 		setShowModal(true);
 	};
 
-  const handleConfirmBooking = async () => {
-    const booking = {
-      carId: car._id,
-      carModel: car.carModel,
-      dailyRentalPrice: car.dailyRentalPrice,
-      location: car.location,
-      features: car.features,
-      photoUrl: car.photoUrl,
-      user: {
-        uid: user.uid,
-        email: user.email,
-      },
-      bookingDate: new Date(),
-      startDate: startDate,
-      endDate: endDate,
-    };
-  
-    try {
-      await axios.post("/book-car", booking);
-      setShowModal(false);
-      navigate("/my-bookings");
-    } catch (error) {
-      console.error("Error booking car:", error);
-    }
-  };
+	const handleConfirmBooking = async () => {
+		const booking = {
+			carId: car._id,
+			carModel: car.carModel,
+			dailyRentalPrice: car.dailyRentalPrice,
+			location: car.location,
+			features: car.features,
+			photoUrl: car.photoUrl,
+			user: {
+				uid: user.uid,
+				email: user.email,
+			},
+			bookingDate: new Date(),
+			startDate: startDate,
+			endDate: endDate,
+		};
+
+		try {
+			await axios.post("/book-car", booking);
+			setShowModal(false);
+			navigate("/my-bookings");
+		} catch (error) {
+			console.error("Error booking car:", error);
+		}
+	};
 
 	const handleAddReview = async () => {
 		if (!user) {
@@ -95,7 +95,7 @@ const CarDetails = () => {
 	}
 
 	return (
-		<div className="container mx-auto px-4 py-16">
+		<div className="container mx-auto px-4 py-16 pt-28">
 			<h2 className="text-4xl font-bold text-center text-dark-gray mb-12">
 				{car.carModel}
 			</h2>
@@ -114,34 +114,27 @@ const CarDetails = () => {
 							No Image
 						</div>
 					)}
-					<div className="grid grid-cols-3 gap-2">
-						{car.images &&
-							car.images
-								.slice(1)
-								.map((image, index) => (
-									<img
-										key={index}
-										src={image}
-										alt={`Car ${index}`}
-										className="w-full h-32 object-cover"
-									/>
-								))}
-					</div>
 				</div>
 				<div>
-					<p className="text-lg text-soft-green mb-2">
-						${car.dailyRentalPrice}/day
+					<p className="text-lg text-soft-green mb-2 font-bold">
+						<span className=" text-black">Price: </span>$
+						{car.dailyRentalPrice}/day
 					</p>
-					<p className="text-sm text-gray-500 mb-2">
+					<p className="text-sm text-gray-800 mb-2">
 						{car.availability}
 					</p>
-					<p className="text-sm text-gray-500 mb-2">{car.features}</p>
-					<p className="text-sm text-gray-500 mb-2">
+					<p className="text-base text-gray-600 mb-2">{car.features}</p>
+					<p className="text-base text-gray-600 mb-2">
 						{car.description}
 					</p>
 					<button
 						onClick={handleBookNow}
-						className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold shadow-lg rounded-none"
+						className={`btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold shadow-lg rounded-none cursor-pointer${
+							car.availability === "Unavailable"
+								? "opacity-70"
+								: ""
+						}`}
+						disabled={car.availability === "Unavailable"}
 					>
 						Book Now
 					</button>
