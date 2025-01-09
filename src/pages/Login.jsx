@@ -34,7 +34,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#778DA9]">
+    <div className="min-h-screen flex justify-center items-center">
       <div className="mx-2 max-w-[500px] max-h-[600px] bg-[#1B263B] text-white card-body rounded-md">
         <h2 className="text-2xl font-bold mb-4 text-white">
           Sign in to your account
