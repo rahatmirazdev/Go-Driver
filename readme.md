@@ -63,7 +63,7 @@ Follow these steps to run Car Rental System on your local machine:
     ```
 2. Navigate to the project directory:
     ```bash
-    cd GoDriver.git
+    cd Go-Driver.git
     ```
 3. Install dependencies:
     ```bash
