@@ -84,7 +84,7 @@ const MyBookings = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 min-h-screen">
       <h2 className="text-4xl font-bold text-center text-dark-gray mb-12">My Bookings</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white">
@@ -116,13 +116,13 @@ const MyBookings = () => {
                 <td className="py-2 px-4 border-b">
                   <button
                     onClick={() => handleModifyBooking(booking)}
-                    className="btn bg-blue-500 text-white hover:bg-blue-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg mr-2"
+                    className="btn bg-blue-500 text-white hover:bg-blue-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg mr-2"
                   >
                     <FaCalendarAlt className="inline mr-1" /> Modify Date
                   </button>
                   <button
                     onClick={() => handleRemoveBooking(booking._id)}
-                    className="btn bg-red-500 text-white hover:bg-red-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+                    className="btn bg-red-500 text-white hover:bg-red-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
                   >
                     <FaTrash className="inline mr-1" /> Cancel
                   </button>
@@ -140,13 +140,13 @@ const MyBookings = () => {
             <div className="mt-4 flex justify-end">
               <button
                 onClick={() => setShowCancelModal(false)}
-                className="btn bg-gray-500 text-white hover:bg-gray-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg mr-2"
+                className="btn bg-gray-500 text-white hover:bg-gray-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg mr-2"
               >
                 No
               </button>
               <button
                 onClick={confirmRemoveBooking}
-                className="btn bg-red-500 text-white hover:bg-red-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+                className="btn bg-red-500 text-white hover:bg-red-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
               >
                 Yes
               </button>
@@ -177,13 +177,13 @@ const MyBookings = () => {
             <div className="mt-4 flex justify-end">
               <button
                 onClick={() => setShowModifyModal(false)}
-                className="btn bg-gray-500 text-white hover:bg-gray-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg mr-2"
+                className="btn bg-gray-500 text-white hover:bg-gray-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg mr-2"
               >
                 Cancel
               </button>
               <button
                 onClick={confirmModifyBooking}
-                className="btn bg-blue-500 text-white hover:bg-blue-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+                className="btn bg-blue-500 text-white hover:bg-blue-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
               >
                 Confirm
               </button>

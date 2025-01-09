@@ -8,7 +8,7 @@ const SpecialOffers = () => {
           Special Offers
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-none overflow-hidden transform transition-transform hover:scale-105">
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-dark-gray mb-2">
                 Get 15% off for weekend rentals!
@@ -18,13 +18,13 @@ const SpecialOffers = () => {
               </p>
               <Link
                 to="/available-cars"
-                className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+                className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
               >
                 Book Now
               </Link>
             </div>
           </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
+          <div className="bg-white shadow-lg rounded-none overflow-hidden transform transition-transform hover:scale-105">
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-dark-gray mb-2">
                 Luxury cars at $99/day this holiday season!
@@ -34,7 +34,7 @@ const SpecialOffers = () => {
               </p>
               <Link
                 to="/available-cars"
-                className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+                className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
               >
                 Book Now
               </Link>

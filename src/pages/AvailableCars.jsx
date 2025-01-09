@@ -74,22 +74,22 @@ const AvailableCars = () => {
           {view === "grid" ? "List View" : "Grid View"}
         </button>
       </div>
-      <div className={view === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" : "list"}>
+      <div className={view === "grid" ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" : "list"}>
         {sortedCars.map((car) => (
           <div key={car._id} className="border p-4 rounded shadow-lg">
             {car.photoUrl ? (
-              <img src={car.photoUrl} alt={car.carModel} className="w-full h-40 object-cover mb-4" />
+              <img src={car.photoUrl} alt={car.carModel} className="w-full object-cover mb-4" />
             ) : (
               <div className="w-full h-40 bg-gray-200 mb-4 flex items-center justify-center">
                 No Image
               </div>
             )}
             <h3 className="text-xl font-bold mb-2">{car.carModel}</h3>
-            <p className="text-gray-700 mb-2">${car.dailyRentalPrice}/day</p>
-            <p className="text-gray-700 mb-2">{car.location}</p>
+            <p className="text-gray-700 mb-2"><span className="font-bold">Price: </span> ${car.dailyRentalPrice}/day</p>
+            <p className="text-gray-700 mb-2"><span className="font-bold">From: </span> {car.location}</p>
             <button
               onClick={() => navigate(`/car-details/${car._id}`)}
-              className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+              className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
             >
               Book Now
             </button>

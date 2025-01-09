@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="bg-light-gray text-dark-gray py-10">
-            <div className="max-w-[1440px] mx-auto px-4">
+            <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-between items-start mb-8">
                     <div className="w-full md:w-1/3 mb-4 md:mb-0 flex items-center">
                         <h2 className="text-2xl font-bold mb-2 text-soft-green">
@@ -12,7 +12,7 @@ const Footer = () => {
                         </h2>
                     </div>
                     <div className="w-full md:w-1/3 mb-4 md:mb-0">
-                        <h3 className="text-lg font-bold mb-2 text-sky-blue">
+                        <h3 className="text-lg font-bold mb-2 text-[#4caf50]">
                             Quick Links
                         </h3>
                         <div className="space-y-1">
@@ -59,7 +59,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="w-full md:w-1/3">
-                        <h3 className="text-xl font-bold mb-2 text-sky-blue">
+                        <h3 className="text-xl font-bold mb-2 text-[#4caf50]">
                             Contact Us
                         </h3>
                         <p className="text-sm text-dark-gray">
@@ -75,7 +75,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="hover:text-gray-400"
                             >
-                                <FaGithub size={24} />
+                                <FaGithub className="text-[#4caf50]" size={24} />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/rahatahmedmiraz/"
@@ -83,7 +83,7 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                                 className="hover:text-gray-400"
                             >
-                                <FaLinkedin size={24} />
+                                <FaLinkedin className="text-[#4caf50]" size={24} />
                             </a>
                         </div>
                     </div>

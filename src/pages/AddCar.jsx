@@ -130,7 +130,7 @@ const AddCar = () => {
             required
           />
         </div>
-        <button type="submit" className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-6 py-3 text-lg font-semibold rounded-md shadow-lg">
+        <button type="submit" className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-6 py-3 text-lg font-semibold rounded-none shadow-lg">
           Add Car
         </button>
       </form>

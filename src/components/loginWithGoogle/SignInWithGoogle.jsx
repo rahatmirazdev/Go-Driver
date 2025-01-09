@@ -29,7 +29,7 @@ const SignInWithGoogle = () => {
       )}
 
       <form action="">
-        <button onClick={handleGoogle} className="btn btn-primary btn-block">
+        <button onClick={handleGoogle} className="btn btn-primary btn-block rounded-none">
           Sign in with Google
         </button>
         {error && <p>{error}</p>}

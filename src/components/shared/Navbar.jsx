@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useAuth } from "../../providers/AuthProvider";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -40,12 +40,8 @@ const Navbar = () => {
 			items.push(
 				{ to: "/add-car", label: "Add Car" },
 				{ to: "/my-cars", label: "My Cars" },
-				{ to: "/my-bookings", label: "My Bookings" },
-				{ to: "#", label: "Logout", onClick: handleLogout }
+				{ to: "/my-bookings", label: "My Bookings" }
 			);
-		} else {
-			items.push({ to: "/login", label: "Log-in" });
-			items.push({ to: "/register", label: "Sign-up" });
 		}
 
 		return items.map((item) => (
@@ -53,7 +49,7 @@ const Navbar = () => {
 				<NavLink
 					to={item.to}
 					className={({ isActive }) =>
-						isActive ? "underline text-sky-blue" : "text-dark-gray"
+						isActive ? "underline text-[#4caf50]" : "text-dark-gray"
 					}
 					onClick={item.onClick}
 				>
@@ -69,11 +65,11 @@ const Navbar = () => {
 				isScrolled ? "bg-white shadow-md" : "bg-transparent"
 			}`}
 		>
-			<div className="container mx-auto px-4 py-6 flex justify-between items-center">
+			<div className="container mx-auto px-4 py-5 flex justify-between items-center">
 				<div className="flex items-center">
-					<span className="text-xl font-bold text-soft-green">
+					<Link className="text-xl font-bold text-soft-green">
 						GoDriver
-					</span>
+					</Link>
 				</div>
 				<div className="md:hidden">
 					<button
@@ -90,8 +86,39 @@ const Navbar = () => {
 							: "hidden"
 					}`}
 				>
-					<ul className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 p-4 md:p-0">
+					<ul className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 p-4 md:p-0 items-center">
 						{generateNavItems()}
+						<div className=" flex">
+							{!user ? (
+								<>
+									<li className="text-base font-medium cursor-pointer">
+										<NavLink
+											to="/login"
+											className="mr-2 px-4 py-2 bg-green-500 text-white "
+										>
+											Log-in
+										</NavLink>
+									</li>
+									<li className="text-base font-medium cursor-pointer">
+										<NavLink
+											to="/register"
+											className="ml-2 px-4 py-2 bg-orange-500 text-white "
+										>
+											Sign-up
+										</NavLink>
+									</li>
+								</>
+							) : (
+								<li className="text-base font-medium cursor-pointer">
+									<button
+										onClick={handleLogout}
+										className="px-4 py-2 bg-red-500 text-white "
+									>
+										Logout
+									</button>
+								</li>
+							)}
+						</div>
 					</ul>
 				</nav>
 			</div>

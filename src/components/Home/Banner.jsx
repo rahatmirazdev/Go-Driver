@@ -7,17 +7,18 @@ import image3 from "../../assets/banner/3.jpg";
 const images = [image1, image2, image3];
 
 const Banner = () => {
-	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentImageIndex(
-				(prevIndex) => (prevIndex + 1) % images.length
-			);
-		}, 3000);
-
-		return () => clearInterval(interval);
-	}, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % images.length
+      );
+    }, 3000);
+  
+    return () => clearInterval(interval);
+  }, []);
+  
 
 	return (
 		<div

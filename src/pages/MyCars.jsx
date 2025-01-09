@@ -75,7 +75,7 @@ const MyCars = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-16 min-h-screen">
       <h2 className="text-4xl font-bold text-center text-dark-gray mb-12">My Cars</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white">
@@ -105,13 +105,13 @@ const MyCars = () => {
                 <td className="py-2 px-4 border-b">
                   <button
                     onClick={() => handleEditCar(car)}
-                    className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg mr-2"
+                    className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg mr-2"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => handleDeleteCar(car._id)}
-                    className="btn bg-red-500 text-white hover:bg-red-700 border-none px-4 py-2 text-sm font-semibold rounded-md shadow-lg"
+                    className="btn bg-red-500 text-white hover:bg-red-700 border-none px-4 py-2 text-sm font-semibold rounded-none shadow-lg"
                   >
                     Delete
                   </button>
@@ -207,13 +207,13 @@ const MyCars = () => {
                   required
                 />
               </div>
-              <button type="submit" className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-6 py-3 text-lg font-semibold rounded-md shadow-lg">
+              <button type="submit" className="btn bg-soft-green text-white hover:bg-warm-orange border-none px-6 py-3 text-lg font-semibold rounded-none shadow-lg">
                 Save Changes
               </button>
               <button
                 type="button"
                 onClick={() => setEditCar(null)}
-                className="btn bg-red-500 text-white hover:bg-red-700 border-none px-6 py-3 text-lg font-semibold rounded-md shadow-lg ml-4"
+                className="btn bg-red-500 text-white hover:bg-red-700 border-none px-6 py-3 text-lg font-semibold rounded-none shadow-lg ml-4"
               >
                 Cancel
               </button>

@@ -20,6 +20,7 @@ const UserTestimonials = () => {
 
 		fetchTestimonials();
 	}, []);
+	console.log(testimonials);
 
 	const settings = {
 		dots: true,
@@ -38,18 +39,30 @@ const UserTestimonials = () => {
 				<h2 className="text-4xl font-bold text-center text-dark-gray mb-12">
 					User Testimonials
 				</h2>
-				<Slider {...settings}>
+				<Slider
+					className="w-[500px] flex flex-col items-center justify-center max-w-96 mx-auto text-center"
+					{...{
+						...settings,
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					}}
+				>
 					{testimonials.map((testimonial, index) => (
-						<div key={index} className="mx-auto p-6 max-w-96 ">
-							<img
-								src={testimonial.profileImage}
-								alt={testimonial.name}
-								className="w-24 h-24 rounded-full mb-4"
-							/>
+						<div
+							key={index}
+							className="flex flex-col items-center justify-center max-w-96 mx-auto text-center"
+						>
+							<div>
+								<img
+									src={testimonial.profileImage}
+									alt={testimonial.name}
+									className="w-24 h-24 rounded-full mb-4 mx-auto"
+								/>
+							</div>
 							<h3 className="text-2xl font-semibold text-dark-gray mb-2">
 								{testimonial.name}
 							</h3>
-							<div className="flex mb-2">
+							<div className="flex justify-center mb-2">
 								{Array.from({ length: testimonial.rating }).map(
 									(_, i) => (
 										<FaStar
@@ -59,9 +72,7 @@ const UserTestimonials = () => {
 									)
 								)}
 							</div>
-							<p className="text-dark-gray">
-								{testimonial.review}
-							</p>
+							<p className="text-dark-gray">{testimonial.text}</p>
 							<p className="text-sm text-gray-500 mt-2">
 								Car Model: {testimonial.carModel}
 							</p>
