@@ -14,6 +14,8 @@ const CarDetails = () => {
 	const [showModal, setShowModal] = useState(false);
 	const [reviewText, setReviewText] = useState("");
 	const [rating, setRating] = useState(0);
+	const [startDate, setStartDate] = useState("");
+	const [endDate, setEndDate] = useState("");
 
 	useEffect(() => {
 		const fetchCar = async () => {
@@ -36,29 +38,31 @@ const CarDetails = () => {
 		setShowModal(true);
 	};
 
-	const handleConfirmBooking = async () => {
-		const booking = {
-			carId: car._id,
-			carModel: car.carModel,
-			dailyRentalPrice: car.dailyRentalPrice,
-			location: car.location,
-			features: car.features,
-			photoUrl: car.photoUrl,
-			user: {
-				uid: user.uid,
-				email: user.email,
-			},
-			bookingDate: new Date(),
-		};
-
-		try {
-			await axios.post("/book-car", booking);
-			setShowModal(false);
-			navigate("/my-bookings");
-		} catch (error) {
-			console.error("Error booking car:", error);
-		}
-	};
+  const handleConfirmBooking = async () => {
+    const booking = {
+      carId: car._id,
+      carModel: car.carModel,
+      dailyRentalPrice: car.dailyRentalPrice,
+      location: car.location,
+      features: car.features,
+      photoUrl: car.photoUrl,
+      user: {
+        uid: user.uid,
+        email: user.email,
+      },
+      bookingDate: new Date(),
+      startDate: startDate,
+      endDate: endDate,
+    };
+  
+    try {
+      await axios.post("/book-car", booking);
+      setShowModal(false);
+      navigate("/my-bookings");
+    } catch (error) {
+      console.error("Error booking car:", error);
+    }
+  };
 
 	const handleAddReview = async () => {
 		if (!user) {
@@ -218,6 +222,28 @@ const CarDetails = () => {
 						<p>Price Per Day: ${car.dailyRentalPrice}</p>
 						<p>Location: {car.location}</p>
 						<p>Features: {car.features}</p>
+						<div className="mb-4">
+							<label className="block text-sm font-medium text-gray-700">
+								Start Date
+							</label>
+							<input
+								type="date"
+								className="w-full px-3 py-2 border rounded"
+								value={startDate}
+								onChange={(e) => setStartDate(e.target.value)}
+							/>
+						</div>
+						<div className="mb-4">
+							<label className="block text-sm font-medium text-gray-700">
+								End Date
+							</label>
+							<input
+								type="date"
+								className="w-full px-3 py-2 border rounded"
+								value={endDate}
+								onChange={(e) => setEndDate(e.target.value)}
+							/>
+						</div>
 						<div className="mt-4 flex justify-end">
 							<button
 								onClick={() => setShowModal(false)}
